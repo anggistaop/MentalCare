@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+body {
+    margin: 0;
+    font-family: "Poppins-Regular", Helvetica;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #dfeaff;
+    padding: 1rem;
+}
+
+.judul {
+    color: #000;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    margin: auto;
+    color: #000;
+    text-align: center;
+    font-family: Yusei Magic !important;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account {
+    margin: auto;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+img.account:hover {
+    transform: scale(1.1); 
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0 15px;
+    white-space: nowrap;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #1E90FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    padding: 2rem;
+}
+
+.isi-selengkapnya {
+    text-align: center;
+}
+
+.gambar {
+    margin-top: -90px;
+    width: 50%; 
+    margin-bottom: 20px; 
+}
+
+.item-1 {
+    background: #FFF;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.selengkapnya {
+    width: 200px;
+    height: 50px;
+    background-color: #00008b;
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.selengkapnya a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.selengkapnya:hover {
+    background-color: #1E90FF;
+}
+
+
+@media screen and (max-width: 768px) {
+    .isi-selengkapnya {
+        flex-direction: column;
+    }
+}
