@@ -1,0 +1,75 @@
+:root {
+  --bg: #f0f8ff;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Poppins', sans-serif;
+}
+
+.layanan {
+  max-height: 350px;
+  background-image: url("/img/about.png");
+}
+
+.layanan h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.icons {
+  font-size: 100px;
+}
+
+.box {
+  min-height: 300px;
+}
+
+.card {
+  border-radius: 25px;
+}
+
+.card img {
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+/* tentang kami */
+.tentang-kami {
+  background-color: var(--bg);
+}
+
+.content {
+  text-align: justify;
+}
+
+/* artikel */
+.artikel {
+  background-color: #fff;
+}
+.artikel p {
+  text-align: justify;
+}
+.artikel img {
+  width: 100%;
+}
+.artikel h2 {
+  font-size: 1.5rem;
+}
+
+/* daftar */
+.daftar-bg {
+  background: url("/img/daftar.jpg") center center / cover no-repeat;
+  position: relative; /* Tambahkan properti position untuk menggunakan posisi relatif */
+}
+
+.daftar-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
