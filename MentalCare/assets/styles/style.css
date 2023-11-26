@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Yusei+Magic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 body {
@@ -254,6 +254,150 @@ p {
     font-weight: 300;
     font-size: 1.2em;
     margin-top: 10px;
+}
+
+.konsultasi-page {
+    background-color: #f0f8ff;
+
+}
+
+.layanan-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-bottom: 275px;
+    margin-right: 200px;
+}
+
+#ki-img {
+    width: 225px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 225px;
+}
+
+.judul {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.subjudul {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.layanan-item {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.item {
+    flex: 1;
+    height: 550px;
+    width: 270px;
+    border: 1px solid #000;
+    background: #FFFAFA;
+    background: #FFFAFA;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sb {
+    color: #000;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.judul-1 {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.item-1 ol,
+.item-2 ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-1 li,
+.item-2 li {
+    font-size: 20px;
+    /* margin-right: 5px; */
+    margin-bottom: 30px;
+    text-align: left;
+}
+.item-1 li::before,
+.item-2 li::before {
+    content: "\2713"; 
+    color: #1E90FF; 
+    margin-right: 5px;
+}
+
+.selengkapnya {
+    width: 200px;
+    height: 50px;
+    background-color: #00008b;
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.selengkapnya a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.selengkapnya:hover {
+    background-color: #1E90FF;
+}
+.selengkapnya-1 {
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    background-color: #00008b;
+    border: 0;
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.selengkapnya-1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.selengkapnya-1:hover {
+    background-color: #1E90FF;
 }
 
 @media screen and (max-width: 768px) {
