@@ -15,14 +15,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.background-2 {
-    position: relative;
-    width: 100%;
-    height: 60%;
-    background-image: url('../img/bg\ kenapa\ memilih\ kami.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 main {
     display: flex;
