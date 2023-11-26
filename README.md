@@ -1,2 +1,12 @@
-# MentalCare
-Mental Care adalah website penanganan para penderita Mental Health yang dikembangkan sebagai upaya untuk mengatasi masalah kesehatan mental dan memberikan dukungan melalui teknologi modern. Mental Care muncul sebagai tanggapan terhadap krisis kesehatan mental yang semakin memprihatinkan.
+# Front - End
+Selesai mengubah desain ke html & css :
+- Dashboard - landing page
+- Tentang kami - landing page
+- layanan konseling - landing page
+- Navbar sebelum login & setelah login
+- Halaman Konseling individu, individu e conseling, individu conseling corner
+- Halaman Konseling pasangan, pasangan online, pasangan offline
+- Halaman Konseling keluarga, keluarga family conseling
+
+kurang :
+- javascript
