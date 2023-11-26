@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Poppins-Regular", Helvetica;
+    background-color: #ffffff;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/Vector%201.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #dfeaff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login {
+    margin:auto;
+    width: 140px;
+    height: 41px;
+    background-color: #1E90FF;
+    border-radius: 20px;
+    border: 0px;
+    color: #F0F8FF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login:hover {
+    background-color: #00008b;
+}
+
+.account {
+    margin: auto;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+img.account:hover {
+    transform: scale(1.1); 
+}
+
+.logo {
+    margin: auto;
+    color: #000;
+    text-align: center;
+    font-family: Yusei Magic !important;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0 15px;
+    white-space: nowrap;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #1E90FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.custom-content { 
+    text-align: center;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-bottom: 275px;
+    margin-right: 200px;
+}
+
+.custom-content-container {
+    width: 50%; 
+    text-align: left;
+}
+
+#home {
+    width: 50%;
+    align-items: right;
+}
+
+.text-wrapper-1 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+p {
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.consult-now {
+    width: 200px;
+    height: 50px;
+    background-color: #00008b;
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.consult-now a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.consult-now:hover {
+    background-color: #1E90FF;
+}
+
+.whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 101; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.whatsapp:hover {
+    transform: scale(1.1); 
+}
+
+.vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.custom-content-2 { 
+    text-align: center;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-bottom: 275px;
+    margin-right: 200px;
+}
+
+.custom-content-container-2 {
+    width: 50%; 
+}
+
+#home2 {
+    width: 50%;
+    flex-shrink: 0;
+    align-items: left;
+}
+
+.text-wrapper-2 {
+    margin: auto;
+    margin-bottom: 40px;
+    color: #000;
+    text-align: left;
+    font-family: Yusei Magic !important;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.p2 {
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .custom-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .custom-content-container {
+        margin: 10% auto;
+        width: 80%;
+    }
+
+    #home {
+        margin: 0; 
+        width: 50%;
+        margin-bottom: 20px; 
+    }
+
+    .text-wrapper-1,
+    p,
+    .consult-now {
+        text-align: center; 
+    }
+
+    .whatsapp {
+        position: static; 
+        margin: 20px auto; 
+    }
+
+    .box {
+        height: auto; 
+    }
+
+    .custom-content-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .custom-content-container-2 {
+        margin: 10% auto;
+        width: 80%;
+    }
+
+    #home2 {
+        margin: 0; 
+        width: 50%;
+        margin-bottom: 20px; 
+    }
+
+    .text-wrapper-2,
+    .p2 {
+        text-align: center; 
+    }
+}
