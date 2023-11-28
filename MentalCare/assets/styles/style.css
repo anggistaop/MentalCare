@@ -131,6 +131,10 @@ ul li a:hover {
     color: #000;
 }
 
+.hamburger {
+    display: none;
+}
+
 .custom-content { 
     text-align: center;
     display: flex;
@@ -400,58 +404,127 @@ p {
     background-color: #1E90FF;
 }
 
-@media screen and (max-width: 768px) {
+footer {
+    width: 100%;
+    height: 230px;
+    flex-shrink: 0;
+    background: #AAC2EF;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .logo {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 44px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: right;
+        width: 100%; 
+        position: absolute;
+        background-color: #f9f9f9;
+        margin-left: -20px;
+        z-index: 1;
+        top: 74px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    .custom-content-container {
+        width: 100%; 
+        text-align: center; 
+    }
+
     .custom-content {
         flex-direction: column;
         align-items: center;
         gap: 0;
-    }
-
-    .custom-content-container {
         margin: 10% auto;
         width: 80%;
     }
 
     #home {
-        margin: 0; 
-        width: 50%;
-        margin-bottom: 20px; 
+        margin: 0;
+        width: 100%; 
+        margin-bottom: 60px;
     }
 
-    .text-wrapper-1,
-    p,
-    .consult-now {
+    .text-wrapper-1 {
+        margin: auto;
+        margin-bottom: 40px;
+        color: #000;
         text-align: center; 
+        line-height: normal;
     }
 
-    .whatsapp {
-        position: static; 
-        margin: 20px auto; 
+    p {
+        text-align: center; 
+        font-weight: 300;
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+    .consult-now {
+        text-align: center;
     }
 
-    .box {
-        height: auto; 
+    .custom-content-container-2 {
+        width: 100%; 
+        text-align: center; 
     }
 
     .custom-content-2 {
         flex-direction: column;
         align-items: center;
         gap: 0;
-    }
-
-    .custom-content-container-2 {
         margin: 10% auto;
         width: 80%;
     }
 
     #home2 {
-        margin: 0; 
-        width: 50%;
-        margin-bottom: 20px; 
+        margin: 0;
+        width: 100%; 
+        margin-top: 90px;
+        margin-bottom: 20px;
     }
 
-    .text-wrapper-2,
+    .text-wrapper-2 {
+        margin: auto;
+        margin-bottom: 40px;
+        color: #000;
+        text-align: center; 
+        font-family: 'Yusei Magic', sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
     .p2 {
         text-align: center; 
+        font-weight: 300;
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    .layanan-item {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
+
