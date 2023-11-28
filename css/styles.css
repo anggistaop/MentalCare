@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yusei+Magic&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -14,10 +16,19 @@ body {
 
 /* Styling Psikolog */
 
+.psikolog {
+  height: 100%;
+}
+
 .psikolog-hero {
-  background-image: url("img/bg-psikolog.jpeg");
+  background-image: url("../img/bg-psikolog.jpeg");
   background-position: center;
-  background-size: 50% ; /* Setengah dari lebar section */
+  background-size: 50%;
+  max-height: 50%;
+}
+
+.psikolog-hero h1{
+  text-align: center;
 }
 
 .psikolog-container {
@@ -30,7 +41,7 @@ body {
 }
 
 .psikolog-container div {
-  margin: 12px; 
+  margin: 12px;
 }
 
 .profile-card {
@@ -59,7 +70,7 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 50%;  
+  border-radius: 50%;
   border-radius: 3px solid #fff;
 }
 
@@ -97,8 +108,13 @@ body {
 
 /* Styling Testimoni */
 
+.judul-testimoni {
+  text-align: center;
+  margin: 0px 0px 50px;
+}
+
 .testimoni-container {
-  background-color: blue;
+  /* background-color: blue; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -112,8 +128,9 @@ body {
 /* Styling Footer */
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #aac2ef;
+  color: #221e4a;
+  margin: 75px 0px;
   padding: 20px 0;
 }
 
@@ -132,6 +149,10 @@ footer {
   height: auto;
 }
 
+.footer-logo h1 {
+  font-family: "Yusei Magic", sans-serif;
+}
+
 .footer-social ul {
   list-style: none;
   display: flex;
@@ -146,7 +167,7 @@ footer {
 }
 
 .footer-social ul li a {
-  color: #fff;
+  color: #221e4a;
   text-decoration: none;
   font-size: 18px;
 }
