@@ -4,7 +4,7 @@
 
 body {
   background-color: var(--bg);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .layanan {
@@ -27,6 +27,7 @@ body {
 
 .card {
   border-radius: 25px;
+  background-color: #000842;
 }
 
 .card img {
@@ -36,6 +37,10 @@ body {
 }
 
 /* tentang kami */
+.logo-about {
+  font-family: "Yusei Magic", sans-serif !important;
+  font-size: 60px;
+}
 .tentang-kami {
   background-color: var(--bg);
 }
@@ -45,6 +50,13 @@ body {
 }
 
 /* artikel */
+.judul-art h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.isi-art p {
+  text-align: justify;
+}
 .artikel {
   background-color: #fff;
 }
@@ -57,19 +69,28 @@ body {
 .artikel h2 {
   font-size: 1.5rem;
 }
+section.ubah-data {
+  background-color: #fff;
+}
+.button-card {
+  background-color: #00008b;
+  color: #fff;
+}
 
 /* daftar */
-.daftar-bg {
+.daftar-bg,
+.login-bg {
   background: url("/img/daftar.jpg") center center / cover no-repeat;
   position: relative; /* Tambahkan properti position untuk menggunakan posisi relatif */
 }
 
-.daftar-bg::before {
+.daftar-bg::before,
+.login-bg::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
