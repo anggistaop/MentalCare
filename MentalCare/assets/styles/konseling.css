@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+body {
+    margin: 0;
+    font-family: "Poppins-Regular", Helvetica;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #dfeaff;
+    padding: 1rem;
+}
+
+.judul {
+    color: #000;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+.logo {
+    margin: auto;
+    color: #000;
+    text-align: center;
+    font-family: Yusei Magic !important;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account {
+    margin: auto;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+img.account:hover {
+    transform: scale(1.1); 
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0 15px;
+    white-space: nowrap;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #1E90FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    padding: 2rem;
+}
+
+.layanan-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.layanan-item {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.item-1,
+.item-2 {
+    flex: 1;
+    border-radius: 50px;
+    height: 500px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.itemm-1 {
+    background: #FFF;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gambar {
+    margin-top: -90px;
+    width: 50%; 
+    margin-bottom: 20px; 
+}
+
+.sb {
+    color: #000;
+    text-align: center;
+    /* font-family: Poppins; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.e-conseling,
+.conseling-corner {
+    color: #000;
+    text-align: center;
+    /* font-family: Poppins; */
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.item-1 ol,
+.item-2 ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-1 li,
+.item-2 li {
+    font-size: 20px;
+    /* margin-right: 5px; */
+    margin-bottom: 30px;
+    text-align: left;
+}
+.item-1 li::before,
+.item-2 li::before {
+    content: "\2713"; 
+    color: #1E90FF; 
+    margin-right: 5px;
+}
+
+.selengkapnya {
+    width: 200px;
+    height: 50px;
+    background-color: #00008b;
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.selengkapnya a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.selengkapnya:hover {
+    background-color: #1E90FF;
+}
+.selengkapnya-1 {
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    background-color: #00008b;
+    border: 0;
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.selengkapnya-1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.selengkapnya-1:hover {
+    background-color: #1E90FF;
+}
+
+footer {
+    background-color: #aac2ef;
+    color: #221e4a;
+    margin-top: 75px;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .footer-logo h1 {
+    font-family: "Yusei Magic", sans-serif;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .footer-social ul li {
+    margin-right: 10px;
+  }
+  
+  .footer-social ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-social ul li a {
+    color: #221e4a;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 44px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: right;
+        width: 100%; 
+        position: absolute;
+        background-color: #f9f9f9;
+        margin-left: -20px;
+        z-index: 1;
+        top: 74px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: left;
+        margin: 10px 0;
+    }
+    
+    .layanan-container {
+        flex-direction: column; 
+    }
+
+    .layanan-item {
+        gap: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .item-1,
+    .item-2 {
+        width: 100%; 
+    }
+}

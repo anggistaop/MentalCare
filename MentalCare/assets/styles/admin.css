@@ -1,0 +1,101 @@
+:root {
+  --main-bg-color: #fff;
+  --main-text-color: #333;
+  --second-text-color: #f7d869;
+  --card-bg: #f7d869;
+  --text-logo: #fff;
+}
+.body {
+  font-family: "Poppins", sans-serif;
+}
+
+.logo-text {
+  color: var(--text-logo);
+  font-size: 35px !important;
+  font-family: "Yusei Magic", sans-serif !important;
+}
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+.card-text {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.card-text p {
+  margin-bottom: 10;
+  text-align: center;
+  padding-right: 10px;
+}
+
+
+/* mycss */
+.bg-color {
+  background-color: #000842;
+}
+
+.bg-card {
+  background-color: var(--card-bg);
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
