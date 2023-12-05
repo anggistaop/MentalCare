@@ -7,7 +7,7 @@
 - psikolog ✅
 - navbar footer ✅
 - halaman admin (dashboard, psikolog, user) ✅
-- halaman admin (jadwal) ❌
+- halaman admin (jadwal) ✅
 - halaman account ❌
 
 nb : responsive pada halaman landing page masih bertumpuk & masih ada tampilan yang belum presisi
