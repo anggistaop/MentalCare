@@ -101,7 +101,7 @@ ul li a:hover {
   height: 100%;
 }
 
-.halaman-account h1{
+.halaman-account h1 {
   text-align: center;
 }
 
@@ -155,16 +155,21 @@ ul li a:hover {
   color: #333;
 }
 
-.text-data .jobs {
+.text-data .name {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 5px;
 }
 
+.text-data .email {
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .button {
   border-radius: 15px;
   color: white;
-  background-color: #743B2D;
+  background-color: #743b2d;
   padding: 10px 32px;
   text-align: center;
   text-decoration: none;
@@ -174,23 +179,7 @@ ul li a:hover {
   cursor: pointer;
 }
 
-.text-data .name {
-  font-size: 15px;
-  font-weight: 400;
+.ubah-password {
+  justify-content: center;
+  align-items: center;
 }
-
-.text-data .experience {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.text-data .kepuasan {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.text-data span {
-  padding: 3px;
-}
-
-
