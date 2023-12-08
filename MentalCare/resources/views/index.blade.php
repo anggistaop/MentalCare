@@ -255,7 +255,7 @@
                         banyak lagi makna hidup yang akan dilewatkan.
                       </p>
                     </div>
-                    <a href="../../artikel/artikel1.html" class="btn button-card py-2">Selengkapnya</a>
+                    <a href="{{ route('artikel1') }}" class="btn button-card py-2">Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -281,7 +281,7 @@
                         untuk berpikir. Yuk disimak dulu.
                       </p>
                     </div>
-                    <a href="../../artikel/artikel2.html" class="btn button-card py-2">Selengkapnya</a>
+                    <a href="{{ route('artikel2') }}" class="btn button-card py-2">Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -308,7 +308,7 @@
                         untuk menghadapi pikiran yang negatif ini.
                       </p>
                     </div>
-                    <a href="../../artikel/artikel3.html" class="btn button-card py-2">Selengkapnya</a>
+                    <a href="{{ route('artikel3') }}" class="btn button-card py-2">Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -333,7 +333,7 @@
                         orang yang tepat?
                       </p>
                     </div>
-                    <a href="../../artikel/artikel4.html" class="btn button-card py-2">Selengkapnya</a>
+                    <a href="{{ route('artikel4') }}" class="btn button-card py-2">Selengkapnya</a>
                   </div>
                 </div>
               </div>

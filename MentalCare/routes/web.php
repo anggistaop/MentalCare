@@ -66,3 +66,20 @@ Route::get('/familyConseling', function () {
 
 //Psikolog
 Route::get('/psikolog', [PsikologController::class, 'index'])->name('psikolog');
+
+//Artikel
+Route::get('/artikel1', function() {
+    return view('artikel.artikel1');
+})->name('artikel1');
+
+Route::get('/artikel2', function() {
+    return view('artikel.artikel2');
+})->name('artikel2');
+
+Route::get('/artikel3', function() {
+    return view('artikel.artikel3');
+})->name('artikel3');
+
+Route::get('/artikel4', function() {
+    return view('artikel.artikel4');
+})->name('artikel4');
