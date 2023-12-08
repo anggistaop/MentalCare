@@ -47,7 +47,7 @@
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
             </ul>
-            <button class="login"><a href="../../login/daftar.html">Masuk Akun</a></button>
+            <button class="login"><a href="{{ route('auth.login') }}">Masuk Akun</a></button>
             <div class="hamburger">&#9776;</div>
         </nav>
         </header>

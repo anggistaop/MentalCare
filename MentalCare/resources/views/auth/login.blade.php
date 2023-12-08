@@ -36,15 +36,13 @@
                   border-radius: 25px;
                   background-color: rgba(255, 255, 255, 0.9);
                 ">
-              <form action="{{ route('auth.authenticate')}}" method="POST">
-                
-              </form>
               <div class="card-body">
                 <div class="row justify-content-center p-4">
                   <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-3 mt-3">
                     Masuk
                   </p>
-                  <form class="mx-1 mx-md-4" action="add.php" method="post">
+                  <form class="mx-1 mx-md-4" action="{{ route('auth.authenticate') }}" method="post">
+                    @csrf
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
@@ -53,9 +51,9 @@
                         >
                         <input
                           type="text"
-                          id="form3Example1c"
+                          id="username"
                           class="form-control form-control-lg py-3"
-                          name="name"
+                          name="username"
                           autocomplete="off"
                           placeholder="Masukan nama pengguna anda"
                           style="
@@ -75,7 +73,7 @@
                         >
                         <input
                           type="password"
-                          id="form3Example4c"
+                          id="password"
                           class="form-control form-control-lg py-3"
                           name="password"
                           autocomplete="off"
@@ -111,7 +109,7 @@
                   <p align="center">
                     Belum punya akun?
                     <a
-                      href="daftar.html"
+                      href="{{ route('register') }}"
                       class="text-warning"
                       style="font-weight: 600; text-decoration: none"
                       >Daftar</a

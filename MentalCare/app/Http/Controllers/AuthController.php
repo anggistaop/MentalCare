@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+
 
 class AuthController extends Controller
 {
@@ -17,29 +20,43 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function store(Request $request)
-    {
-        // Validate the user
-        $validate = $request->validate([
-            'username' => 'required|unique:users',
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
-
-        // Create the user
-        $data['password'] = Hash::make($request->password);
-        User::create($data);
-        return redirect('/login');
-    }
-
-    public function logout()
-    {
-
-    }
-
     public function authenticate(Request $request)
     {
-        
+        $validate = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+        $data = [
+            'username' => $request->username,
+            'password' => $request->password
+        ];
+
+        if (Auth::attempt($data)) {
+            return redirect()->route('index');
+        } else {
+            return redirect()->route('login');
+        }
     }
 
+    public function store(Request $request)
+    {
+        $validate = $request->validate([
+            'username' => 'required|unique:users',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        $data = [
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ];
+        User::create($data);
+        return redirect()->route('login');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect()->route('login');
+    }
 }

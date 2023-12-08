@@ -45,13 +45,15 @@
                   background-color: rgba(255, 255, 255, 0.9);
                 "
               >
+
                 <div class="card-body p-4">
                   <div class="row justify-content-center">
                     <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-3 mt-3">
                       Daftar
                     </p>
 
-                    <form class="mx-1 mx-md-4" action="add.php" method="post">
+                    <form class="mx-1 mx-md-4" action="{{ route('auth.store') }}" method="post">
+                      @csrf
                       <div class="d-flex flex-row align-items-center mb-4">
                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div class="form-outline flex-fill mb-0">
@@ -60,7 +62,7 @@
                           >
                           <input
                             type="text"
-                            id="form3Example3c"
+                            id="username"
                             class="form-control form-control-lg py-3"
                             name="username"
                             autocomplete="off"
@@ -81,7 +83,7 @@
                           >
                           <input
                             type="email"
-                            id="form3Example3c"
+                            id="email"
                             class="form-control form-control-lg py-3"
                             name="email"
                             autocomplete="off"
@@ -103,7 +105,7 @@
                           >
                           <input
                             type="password"
-                            id="form3Example3c"
+                            id="password"
                             class="form-control form-control-lg py-3"
                             name="password"
                             autocomplete="off"
@@ -136,7 +138,7 @@
                     <p align="center">
                       Saya sudah memiliki akun!
                       <a
-                        href="login.html"
+                        href="{{ route('login') }}"
                         class="text-warning"
                         style="font-weight: 600; text-decoration: none"
                         >Login</a
