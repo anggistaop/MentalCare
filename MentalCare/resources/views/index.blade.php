@@ -33,13 +33,13 @@
         <nav>
             <div class="logo">MentalCare</div>
             <ul class="nav-links">
-                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="{{ route('index') }}">Beranda</a></li>
                 <li class="dropdown">
                     <span>Konseling </span>
                     <div class="dropdown-content">
-                        <a href="../../konseling/konseling individu/konselingIndividu.html">Individu</a>
-                        <a href="../../konseling/konseling pasangan/konselingPasangan.html">Pasangan</a>
-                        <a href="../../konseling/konseling keluarga/konselingKeluarga.html">Keluarga</a>
+                        <a href="{{ route('konselingIndividu') }}">Individu</a>
+                        <a href="{{ route('konselingPasangan') }}">Pasangan</a>
+                        <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
                     </div>
                 </li>
                 <li><a href="#psikolog">Psikolog</a></li>
@@ -47,7 +47,7 @@
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
             </ul>
-            <button class="login"><a href="{{ route('auth.login') }}">Masuk Akun</a></button>
+            <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
             <div class="hamburger">&#9776;</div>
         </nav>
         </header>
