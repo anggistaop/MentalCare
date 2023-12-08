@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yusei+Magic&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+/* Header */
+header {
+  background-color: #dfeaff;
+  padding: 1rem;
+}
+
+nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.account {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+img.account:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  margin: auto;
+  color: #000;
+  text-align: center;
+  font-family: Yusei Magic !important;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0 15px;
+  white-space: nowrap;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #1e90ff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Styling Halaman Psikolog */
+
+.halaman-psikolog {
+  height: 100%;
+}
+
+.psikolog-container {
+  color: #fff;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.psikolog-container div {
+  margin: 12px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background: #fff;
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.profile-image .profile-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border-radius: 3px solid #fff;
+}
+
+.profile-card .text-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.text-data .jobs {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.text-data .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.text-data .experience {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.text-data .kepuasan {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.text-data span {
+  padding: 3px;
+}
+
+footer {
+  background-color: #aac2ef;
+  color: #221e4a;
+  margin-top: 75px;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-logo h1 {
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.footer-social ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer-social ul li {
+  margin-right: 10px;
+}
+
+.footer-social ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-social ul li a {
+  color: #221e4a;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 44px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: right;
+  width: 100%; 
+  position: absolute;
+  background-color: #f9f9f9;
+  margin-left: -15px;
+  z-index: 1;
+  top: 100px;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links li {
+    text-align: left;
+    margin: 10px 0;
+}
+
+p {
+  text-align: center; 
+  font-weight: 300;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.psikolog-container {
+  flex-direction: column;
+}
+}

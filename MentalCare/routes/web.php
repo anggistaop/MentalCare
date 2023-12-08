@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PsikologController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,8 +29,9 @@ Route::post('/register', [AuthController::class, 'store'])->name('auth.store');
 Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 // Home
-Route::resource('/', \App\Http\Controllers\HomeController::class);
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
+//Konseling
 Route::get('/konselingindividual', function () {
     return view('konseling.individu.konselingIndividu');
 })->name('konselingIndividu');
@@ -60,3 +63,6 @@ Route::get('/konselingKeluarga', function () {
 Route::get('/familyConseling', function () {
     return view('konseling.keluarga.familyConseling');
 })->name('familyConseling');
+
+//Psikolog
+Route::get('/psikolog', [PsikologController::class, 'index'])->name('psikolog');

@@ -24,7 +24,7 @@
                         <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
                     </div>
                 </li>
-                <li><a href="#">Psikolog</a></li>
+                <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
                 <li><a href="#">Artikel</a></li>
                 <li><a href="#">Testimoni</a></li>
                 <li><a href="#">Tentang Kami</a></li>

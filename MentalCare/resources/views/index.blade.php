@@ -42,7 +42,7 @@
                         <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
                     </div>
                 </li>
-                <li><a href="#psikolog">Psikolog</a></li>
+                <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
                 <li><a href="#artikel">Artikel</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
@@ -153,7 +153,7 @@
                             <p class="sb">Sering merasa cemas, insecure atau masalah lainnya? Yuk mulai langkah pertamamu bersama konsultasi bersama Psikolog Profesional MentalCare</p>
                        
                             <button class="selengkapnya">
-                                <a href="../../konseling/konseling individu/konselingIndividu.html">selengkapnya</a>
+                                <a href="{{ route('konselingIndividu') }}">selengkapnya</a>
                             </button>
                         </div>
                         <div class="item">
@@ -162,7 +162,7 @@
                             <p class="sb">Sedang mengalami masalah dengan pasangan? Diskusikan masalahmu dan temukan solusinya bersama Psikolog Profesional MentalCare</p>
                          
                             <button class="selengkapnya">
-                                <a href="../../konseling/konseling pasangan/konselingPasangan.html">selengkapnya</a>
+                                <a href="{{ route('konselingPasangan') }}">selengkapnya</a>
                             </button>
                         </div>
                         <div class="item">
@@ -171,7 +171,7 @@
                             <p class="sb">Proses konsultasi yang melibatkan anggota keluarga dengan tujuan menyelesaikan masalah demi tercapainya keluarga yang harmonis.</p>
                         
                             <button class="selengkapnya">
-                                <a href="../../konseling/konseling keluarga/konselingKeluarga.html">selengkapnya</a>
+                                <a href="{{ route('konselingKeluarga') }}">selengkapnya</a>
                             </button>
                         </div>
                     </div>
