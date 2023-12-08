@@ -33,29 +33,27 @@
   </head>
   <body>
     <header>
-        <nav>
-            <div class="logo">MentalCare</div>
-            <ul class="nav-links">
-                <li><a href="{{ route('index') }}">Beranda</a></li>
-                <li class="dropdown">
-                    <span>Konseling </span>
-                    <div class="dropdown-content">
-                        <a href="{{ route('konselingIndividu') }}">Individu</a>
-                        <a href="{{ route('konselingPasangan') }}">Pasangan</a>
-                        <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
-                    </div>
-                </li>
-                <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
-                <li><a href="#artikel">Artikel</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-            </ul>
-            <a class="account" href="#">
-                <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
-            </a>
-            <div class="hamburger">&#9776;</div>
-        </nav>
-        </header>
+      <nav>
+          <div class="logo">MentalCare</div>
+          <ul class="nav-links">
+              <li><a href="{{ route('index') }}">Beranda</a></li>
+              <li class="dropdown">
+                  <span>Konseling </span>
+                  <div class="dropdown-content">
+                      <a href="{{ route('konselingIndividu') }}">Individu</a>
+                      <a href="{{ route('konselingPasangan') }}">Pasangan</a>
+                      <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
+                  </div>
+              </li>
+              <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
+              <li><a href="#artikel">Artikel</a></li>
+              <li><a href="#testimoni">Testimoni</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+          </ul>
+          <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+          <div class="hamburger">&#9776;</div>
+      </nav>
+      </header>
         @yield('content')
     <footer class="footer-container">
         <div class="footer-content">
