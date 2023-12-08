@@ -9,6 +9,13 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -20,22 +27,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
-    <style>
-      section.vh-100 {
-        background: url("/img/daftar.jpg") center center / cover no-repeat;
-      }
-    </style>
+
+    <!-- mycss -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
   </head>
 
   <body>
-    <section class="daftar-bg vh-100">
+    <section class="login-bg vh-100">
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-lg-5">
-            <div class="card text-black" style="
-                  border-radius: 25px;
-                  background-color: rgba(255, 255, 255, 0.9);
-                ">
+            <div
+              class="card text-black"
+              style="
+                border-radius: 25px;
+                background-color: rgba(255, 255, 255, 0.9) !important;
+                box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.25) !important;
+              "
+            >
               <div class="card-body">
                 <div class="row justify-content-center p-4">
                   <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-3 mt-3">
@@ -57,9 +66,9 @@
                           autocomplete="off"
                           placeholder="Masukan nama pengguna anda"
                           style="
-                              border-radius: 25px;
-                              background-color: rgba(255, 255, 255, 0.3);
-                            "
+                            border-radius: 25px;
+                            background-color: rgba(255, 255, 255, 0.3);
+                          "
                         />
                       </div>
                     </div>
@@ -112,8 +121,9 @@
                       href="{{ route('register') }}"
                       class="text-warning"
                       style="font-weight: 600; text-decoration: none"
-                      >Daftar</a
                     >
+                      <b>Daftar</b>
+                    </a>
                   </p>
                 </div>
               </div>

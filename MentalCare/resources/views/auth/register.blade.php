@@ -27,25 +27,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
   </head>
 
   <body>
     <section class="daftar-bg vh-100">
-      <div class="gradient">
         <div class="container h-100">
           <div
             class="row d-flex justify-content-center align-items-center h-100"
           >
-            <div class="col-lg-5 pt-xl-5">
+            <div class="col-lg-5 pt-xl-4">
               <div
                 class="card text-black"
                 style="
                   border-radius: 25px;
-                  background-color: rgba(255, 255, 255, 0.9);
+                  background-color: rgba(255, 255, 255, 0.9) !important;
                 "
               >
-
                 <div class="card-body p-4">
                   <div class="row justify-content-center">
                     <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-3 mt-3">
@@ -66,7 +64,7 @@
                             class="form-control form-control-lg py-3"
                             name="username"
                             autocomplete="off"
-                            placeholder="Masukan alamat email anda"
+                            placeholder="Masukan alamat username anda"
                             style="
                               border-radius: 25px;
                               background-color: rgba(255, 255, 255, 0.3);
@@ -150,7 +148,7 @@
             </div>
           </div>
         </div>
-      </div>
+      
     </section>
 
     <!-- Bootstrap JavaScript Libraries -->
