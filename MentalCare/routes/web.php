@@ -83,3 +83,46 @@ Route::get('/artikel3', function() {
 Route::get('/artikel4', function() {
     return view('artikel.artikel4');
 })->name('artikel4');
+
+//Admin
+Route::get('/dashboard', function() {
+    return view('admin.dashboard.dashboard');
+})->name('dashboard');
+
+Route::get('/detail-jadwal', function() {
+    return view('admin.jadwal.detail-jadwal');
+})->name('detail-jadwal');
+
+Route::get('/form-jadwal', function() {
+    return view('admin.jadwal.form-jadwal');
+})->name('form-jadwal');
+
+Route::get('/jadwal', function() {
+    return view('admin.jadwal.jadwal');
+})->name('jadwal');
+
+Route::get('/detail-psi', function() {
+    return view('admin.psikolog.detail-psi');
+})->name('detail-psi');
+
+Route::get('/form-psi', function() {
+    return view('admin.psikolog.form-psi');
+})->name('form-psi');
+
+Route::get('/psikolog', function() {
+    return view('admin.psikolog.psikolog');
+})->name('psikolog');
+
+Route::get('/detail-user', function() {
+    return view('admin.user.detail-user');
+})->name('detail-user');
+
+Route::get('/form-user', function() {
+    return view('admin.user.form-user');
+})->name('form-user');
+
+Route::get('/user', function() {
+    return view('admin.user.user');
+})->name('user');
+
+
