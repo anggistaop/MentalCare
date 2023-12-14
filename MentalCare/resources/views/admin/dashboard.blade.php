@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/styles/admin.css" />
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
     <title>dashboard admin</title>
 </head>
 
@@ -25,9 +25,9 @@
         <div class="bg-color" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4 logo-text fs-4 border-bottom">MentalCare</div>
             <div class="list-group list-group-flush my-3">
-                <a href="dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"><i
+                <a href="{{ route('dashboard') }}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="./user/user.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"><i
+                <a href="{{ route('user') }}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"><i
                         class="fas fa-user me-2"></i>User</a>
                 <a href="./psikolog/psikolog.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"><i
                         class="fas fa-users me-2"></i>Psikolog</a>

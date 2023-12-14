@@ -86,7 +86,7 @@ Route::get('/artikel4', function() {
 
 //Admin
 Route::get('/dashboard', function() {
-    return view('admin.dashboard.dashboard');
+    return view('admin.dashboard');
 })->name('dashboard');
 
 Route::get('/detail-jadwal', function() {
