@@ -1,4 +1,4 @@
-@extends('admin.user.template')
+@extends('admin.template')
     <title>@yield('title', 'ubah data-psi')</title>
 
 @section('content')
