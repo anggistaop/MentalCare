@@ -118,7 +118,7 @@ ul {
 }
 
 ul li {
-    margin: 0 15px;
+    margin: 28px 15px 15px 15px;
     white-space: nowrap;
 }
 
@@ -246,38 +246,49 @@ ul li a:hover {
     z-index: -1;
 }
 
+/* Styling Halaman Layanan */
+
 .halaman-layanan {
-    height: 100%;
+  background-color: #f0f8ff;
+  height: 100vh;
+}      
+
+.layanan-hero {
+  background-image: url("../img/about.png");
+  background-position: center;
+  background-size: 100%;
+  max-height: 50%;
 }
 
-.layanan {
-    max-height: 350px;
-    background-image: url("../img/about.png");
-  }
+.layanan-hero h1{
+  text-align: center;
+}
+
+.layanan-container {
+  color: #fff;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.layanan-container div {
+  margin: 12px;
+}
+
+.profile-card-layanan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background: #221E4A;
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
   
-  .layanan h3 {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  
-  .icons {
-    font-size: 100px;
-  }
-  
-  .box {
-    min-height: 300px;
-  }
-  
-  .card {
-    border-radius: 25px;
-    background-color: #000842 !important;
-  }
-  
-  .card img {
-    align-items: center;
-    width: 100px;
-    height: 100px;
-  }
   
   /* tentang kami */
   .logo-about {
@@ -297,7 +308,7 @@ ul li a:hover {
 
 }
 
-.layanan-container {
+.konsultasi-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -306,9 +317,7 @@ ul li a:hover {
     margin-bottom: 275px;
     margin-right: 200px;
 }
-.konsultasii {
-    margin-top: 140px;
-}
+
 #ki-img {
     width: 225px;
     height: 200px;
@@ -337,7 +346,7 @@ ul li a:hover {
     line-height: normal;
 }
 
-.layanan-item {
+.konsultasi-item {
     gap: 20px;
     display: flex;
     flex-direction: row;
@@ -447,8 +456,8 @@ ul li a:hover {
   .psikolog-hero {
     background-image: url("../img/bg\ psikolog.jpeg");
     background-position: center;
-    background-size: 50%;
-    max-height: 70%;
+    background-size: 100%;
+    max-height: 50%;
   }
   
   .psikolog-hero h1{
@@ -541,9 +550,31 @@ ul li a:hover {
   }
   
   /* artikel */
+  .artikel-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+  }
+  .item-artikel {
+    width: 500px;
+    height: 600px;
+    margin-bottom: 20px;
+  }
+  .artikel-img {
+    align-items: center;
+    width: 480px;
+    height: 300px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
 .judul-art h2 {
+  text-align: center;
     font-size: 40px;
     font-weight: bold;
+    margin-bottom: 70px;
   }
   .isi-art p {
     text-align: justify;
@@ -553,9 +584,6 @@ ul li a:hover {
   }
   .artikel p {
     text-align: justify;
-  }
-  .artikel img {
-    width: 100%;
   }
   .artikel h2 {
     font-size: 1.5rem;
@@ -567,15 +595,12 @@ ul li a:hover {
   section.ubah-data {
     background-color: #fff;
   }
-  .button-card {
-    background-color: #00008b !important;
-    color: #fff !important;
-  }
-  .button-card:hover {
-    background-color: #1E90FF !important;
-  }
 
   /* Styling Testimoni */
+  .testimoni {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
   .p-testi {
     width: 465px;
     height: 43px;
@@ -744,8 +769,11 @@ footer {
     #home {
         display: none;
         margin: 0;
-        width: 100%; 
-        margin-bottom: 60px;
+        width: 75%; 
+        /* margin-bottom: 60px; */
+    }
+    .about {
+      margin-bottom: 40px;
     }
 
     .text-wrapper-1 {
@@ -797,21 +825,57 @@ footer {
         margin-top: 10px;
     }
 
-    .layanan-item {
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .halaman-layanan {
+      height: 100%;
+    }
+    .layanan-hero {
+      width: 100%;
+      height: 100%;
+    }
+    .layanan-container {
+      display: flex;
+      flex-direction: column;
     }
 
+    .konsultasi-item {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .item {
+      width: 100%;
+    }
+
+    .psikolog {
+      width: 100%;
+      height: 100%;
+    }
     .psikolog-container {
-        display: flex;
-        flex-direction: column;
-      }
+      display: flex;
+      flex-direction: column;
+    }
+
+    .artikel-container {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto;
+      width: 100%;
+      height: 100%;
+      gap: 30px;
+    }
 
       .testimoni-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+
+      .text-data .h2{
+        text-align: center;
       }
 }
