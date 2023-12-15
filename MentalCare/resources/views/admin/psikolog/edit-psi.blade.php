@@ -1,5 +1,5 @@
 @extends('admin.template')
-    <title>@yield('title', 'tambah data-psi')</title>
+    <title>@yield('title', 'ubah data-psi')</title>
 
 @section('content')
       <!-- Page Content -->
@@ -48,8 +48,9 @@
 
         <div class="col-md-6 p-4">
           <h2 class="my-3">Tambah Data</h2>
-          <form action="{{ route('psikolog.store') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('psikolog.update', $psikolog->id) }}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="form-group row">
               <label for="name" class="col-sm-3 col-form-label"
                 >Psikolog</label
@@ -62,7 +63,7 @@
                   name="name"
                   autofocus
                   autocomplete="off"
-                  value=""
+                  value="{{ $psikolog->name }}"
                 />
                 <div class="invalid-feedback"></div>
               </div>
@@ -77,12 +78,15 @@
                   class="form-control"
                   id="category"
                   name="category"
-                  value=""
+                  value="{{ $psikolog->category }}"
                 />
               </div>
             </div>
             <div class="form-group row mt-3">
               <label for="image" class="col-sm-3 col-form-label">Foto</label>
+              <div class="col-sm-2">
+                <img src="{{ asset('/storage/psikologs/'.$psikolog->image) }}" class="img-thumbnail img-preview" />
+              </div>
               <div class="col-sm-7">
                 <div class="custom-file">
                   <input
@@ -103,7 +107,7 @@
             </div>
             <div class="form-group row mt-3">
               <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Edit Data</button>
               </div>
             </div>
           </form>

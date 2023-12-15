@@ -90,7 +90,7 @@
                 <h3 class="fs-4 mb-3">Daftar Psikolog</h3>
               </div>
               <div class="col-md-4 text-end">
-                <a href="{{ route('form-psi') }}" class="btn btn-primary fs-7 mb-3">Tambah Data</a>
+                <a href="{{ route('psikolog.create') }}" class="btn btn-primary fs-7 mb-3">Tambah Data</a>
               </div>
             </div>
             <div class="col">
@@ -105,19 +105,25 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @forelse ($psikologs as $psikolog)
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{ $psikolog->id }}</th>
                     <td>
-                      <img src="" alt="profile-img" />
+                      <img src="{{ asset('/storage/psikologs/'.$psikolog->image) }}" alt="profile-img" />
                     </td>
-                    <td>Faradiba, M.Psi., Psikolog</td>
-                    <td>Psikolog Klinis Umum</td>
+                    <td>{{ $psikolog->name }}</td>
+                    <td>{{ $psikolog->category }}</td>
                     <td>
-                      <a href="{{ route('detail-psi') }}" class="btn btn-primary"
+                      <a href="{{ route('psikolog.show', $psikolog->id) }}" class="btn btn-primary"
                         >Detail</a
                       >
                     </td>
                   </tr>
+                  @empty
+                  <div class="alert alert-danger">
+                    Data Psikolog belum Tersedia.
+                  </div>
+                  @endforelse
                 </tbody>
               </table>
             </div>

@@ -50,21 +50,20 @@
           <div class="mb-3" style="max-width: 540px">
             <div class="row no-gutters">
               <div class="col-md-4">
-                <img src="../../assets/img/profile1.png" alt="profile-img" class="card-img" />
+                <img src="{{ asset('storage/psikologs/'.$psikolog->image) }}" alt="profile-img" class="card-img" />
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Faradiba, M.Psi., Psikolog</h5>
-                  <p class="card-text">Kategori : Psikolog</p>
+                  <h5 class="card-title">{{ $psikolog->name }}</h5>
+                  <p class="card-text">Kategori : {{ $psikolog->category }}</p>
 
-                  <a href="./form-psi.html" class="btn btn-warning">Edit</a>
-                  <button
-                    type="submit"
-                    class="btn btn-danger ms-2"
-                    onclick="return confirm('apakah anda yakin')"
-                  >
-                    Delete
-                  </button>
+                  <form action="{{ route('psikolog.destroy', $psikolog->id) }}" method="POST">
+                    <a href="{{ route('psikolog.edit', $psikolog->id) }}" class="btn btn-warning">Edit</a>
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger ms-2" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
+                `</form>
+
                 </div>
               </div>
             </div>
