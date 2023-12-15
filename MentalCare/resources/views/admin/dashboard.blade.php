@@ -33,7 +33,7 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-card shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">89</h3>
+                                <h3 class="fs-2">{{ $totalUser }}</h3>
                                 <p class="fs-5">User</p>
                             </div>
                             <i class="fas fa-user fs-1 primary-text p-3"></i>
@@ -43,7 +43,7 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-card shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">89</h3>
+                                <h3 class="fs-2">{{ $totalPsikolog }}</h3>
                                 <p class="fs-5">Psikolog</p>
                             </div>
                             <i
@@ -54,7 +54,7 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-card shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">89</h3>
+                                <h3 class="fs-2">{{ $totalJadwal }}</h3>
                                 <p class="fs-5">Jadwal</p>
                             </div>
                             <i class="fas fa-calendar-times fs-1 primary-text p-3"></i>

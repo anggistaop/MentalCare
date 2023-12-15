@@ -85,9 +85,7 @@ Route::get('/artikel4', function() {
 })->name('artikel4');
 
 //Admin
-Route::get('/dashboard', function() {
-    return view('admin.dashboard');
-})->name('dashboard');
+Route::resource('/dashboard', \App\Http\Controllers\DashboardController::class);
 
 Route::get('/detail-jadwal', function() {
     return view('admin.jadwal.detail-jadwal');
@@ -97,9 +95,7 @@ Route::get('/form-jadwal', function() {
     return view('admin.jadwal.form-jadwal');
 })->name('form-jadwal');
 
-Route::get('/jadwal', function() {
-    return view('admin.jadwal.jadwal');
-})->name('jadwal');
+Route::resource('/jadwal', \App\Http\Controllers\AdminJadwalController::class);
 
 Route::get('/detail-psi', function() {
     return view('admin.psikolog.detail-psi');
@@ -109,9 +105,7 @@ Route::get('/form-psi', function() {
     return view('admin.psikolog.form-psi');
 })->name('form-psi');
 
-Route::get('/psikolog', function() {
-    return view('admin.psikolog.psikolog');
-})->name('psikolog');
+Route::resource('/psikolog', \App\Http\Controllers\AdminPsikologController::class);
 
 Route::get('/detail-user', function() {
     return view('admin.user.detail-user');
@@ -121,8 +115,6 @@ Route::get('/form-user', function() {
     return view('admin.user.form-user');
 })->name('form-user');
 
-Route::get('/user', function() {
-    return view('admin.user.user');
-})->name('user');
+Route::resource('/user', \App\Http\Controllers\AdminUserController::class);
 
 

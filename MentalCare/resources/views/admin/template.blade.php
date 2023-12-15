@@ -35,22 +35,22 @@
         </div>
         <div class="list-group list-group-flush my-3">
           <a
-            href="{{ route('dashboard') }}"
+            href="{{ route('dashboard.index') }}"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"
             ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
           >
           <a
-            href="{{ route('user')  }}"
+            href="{{ route('user.index')  }}"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"
             ><i class="fas fa-user me-2"></i>User</a
           >
           <a
-            href="{{ route('psikolog') }}"
+            href="{{ route('psikolog.index') }}"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"
             ><i class="fas fa-users me-2"></i>Psikolog</a
           >
           <a
-            href="{{ route('jadwal') }}"
+            href="{{ route('jadwal.index') }}"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"
             ><i class="fas fa-calendar-times me-2"></i>Jadwal</a
           >
