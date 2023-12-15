@@ -31,6 +31,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+
 //Konseling
 Route::get('/konselingindividual', function () {
     return view('konseling.individu.konselingIndividu');
@@ -85,36 +86,14 @@ Route::get('/artikel4', function() {
 })->name('artikel4');
 
 //Admin
-Route::resource('/admin/dashboard', \App\Http\Controllers\DashboardController::class);
-
-Route::get('/admin/detail-jadwal', function() {
-    return view('admin.jadwal.detail-jadwal');
-})->name('detail-jadwal');
-
-Route::get('/admin/form-jadwal', function() {
-    return view('admin.jadwal.form-jadwal');
-})->name('form-jadwal');
-
-Route::resource('/admin/jadwal', \App\Http\Controllers\AdminJadwalController::class);
-
-Route::get('/admin/detail-psi', function() {
-    return view('admin.psikolog.detail-psi');
-})->name('detail-psi');
-
-Route::get('/admin/form-psi', function() {
-    return view('admin.psikolog.form-psi');
-})->name('form-psi');
-
-Route::resource('/admin/psikolog', \App\Http\Controllers\AdminPsikologController::class);
-
-Route::get('/admin/detail-user', function() {
-    return view('admin.user.detail-user');
-})->name('detail-user');
-
-Route::get('/admin/form-user', function() {
-    return view('admin.user.form-user');
-})->name('form-user');
-
-Route::resource('/admin/user', \App\Http\Controllers\AdminUserController::class);
+Route::group(['middleware' => ['auth', 'admin']], function(){
+    Route::resource('/admin/dashboard', \App\Http\Controllers\DashboardController::class);
+    
+    Route::resource('/admin/jadwal', \App\Http\Controllers\AdminJadwalController::class);
+    
+    Route::resource('/admin/psikolog', \App\Http\Controllers\AdminPsikologController::class);
+    
+    Route::resource('/admin/user', \App\Http\Controllers\AdminUserController::class);
+});
 
 
