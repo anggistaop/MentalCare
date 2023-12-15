@@ -67,7 +67,7 @@
                 </div>
                 <img id="home" src="{{asset('img/home.png')}}" alt="Home Image">
             </div>            
-            <a href="whatsapp.com">
+            <a href="https://wa.me/6285643152235?text=Selamat%20Datang%20DiLayanan%20Customer%20Service%20Mental%20Care!%0AAda%20Yang%20Bisa%20Kami%20Bantu?">
                 <img src="{{asset('img/whatsapp 1.png')}}" class="whatsapp" alt="Gambar WhatsApp">
             </a>
         </div>
