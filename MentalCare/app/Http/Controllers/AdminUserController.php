@@ -69,7 +69,8 @@ class AdminUserController extends Controller
         return redirect()->route('user.index')->with('success', 'Data berhasil ditambahkan');
     }
 
-    public function show(string $id): View{
+    public function show(string $id): View
+    {
         $user = User::findOrFail($id);
 
         return view('admin.user.detail-user', compact('user'));

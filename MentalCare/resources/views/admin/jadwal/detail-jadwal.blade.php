@@ -52,18 +52,17 @@
             <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Faradiba, M.Psi., Psikolog</h5>
-                  <p class="card-text">Kategori : Psikolog Klinis Umum</p>
-                  <p class="card-text">Jadwal Terapi : 27/11/2023; Anonymous</p>
+                  <h5 class="card-title">{{ $jadwal->psikolog }}</h5>
+                  <p class="card-text">Kategori : {{ $jadwal->kategori }}</p>
+                  <p class="card-text">Jadwal Terapi : {{ $jadwal->tanggal }}</p>
 
-                  <a href="form-jadwal.html" class="btn btn-warning">Edit</a>
-                  <button
-                    type="submit"
-                    class="btn btn-danger ms-2"
-                    onclick="return confirm('apakah anda yakin')"
-                  >
-                    Delete
-                  </button>
+                  <form action="{{ route('jadwal.destroy', $jadwal->id) }}" method="POST">
+                    <a href="{{ route('jadwal.edit', $jadwal->id) }}" class="btn btn-warning">Edit</a>
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger ms-2" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
+                </form>
+
                 </div>
               </div>
             </div>

@@ -65,7 +65,6 @@
                   value="{{ $user->namaLengkap }}"
                   autofocus
                   autocomplete="off"
-                  value=""
                 />
                 <div class="invalid-feedback"></div>
               </div>

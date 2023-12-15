@@ -47,9 +47,10 @@
         <!-- form ubah data -->
 
         <div class="col-md-6 p-4">
-          <h2 class="my-3">Tambah Data</h2>
-          <form action="{{ route('jadwal.store') }}" method="post" enctype="multipart/form-data">
+          <h2 class="my-3">Edit Data</h2>
+          <form action="{{ route('jadwal.update', $jadwal->id) }}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="form-group row">
               <label for="psikolog" class="col-sm-3 col-form-label"
                 >Psikolog</label
@@ -62,7 +63,7 @@
                   name="psikolog"
                   autofocus
                   autocomplete="off"
-                  value=""
+                  value="{{ $jadwal->psikolog }}"
                 />
                 <div class="invalid-feedback"></div>
               </div>
@@ -77,7 +78,7 @@
                   class="form-control"
                   id="kategori"
                   name="kategori"
-                  value=""
+                  value="{{ $jadwal->kategori }}"
                 />
               </div>
             </div>
@@ -91,13 +92,13 @@
                   class="form-control"
                   id="tanggal"
                   name="tanggal"
-                  value=""
+                  value="{{ $jadwal->tanggal  }}"
                 />
               </div>
             </div>
             <div class="form-group row mt-3">
               <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Edit Data</button>
               </div>
             </div>
           </form>

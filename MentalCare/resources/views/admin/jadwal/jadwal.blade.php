@@ -69,7 +69,7 @@
                 <h3 class="fs-4 mb-3">Daftar Psikolog</h3>
               </div>
               <div class="col-md-4 text-end">
-                <a href="{{ route('form-jadwal') }}" class="btn btn-primary fs-7 mb-3">Tambah Data</a>
+                <a href="{{ route('jadwal.create') }}" class="btn btn-primary fs-7 mb-3">Tambah Data</a>
               </div>
             </div>
             <div class="col">
@@ -80,19 +80,27 @@
                     <th scope="col">Nama</th>
                     <th scope="col">Kategory</th>
                     <th scope="col">Jadwal</th>
+                    <th scope="col">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
+                  @forelse ($jadwals as $jadwal)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Faradiba, M.Psi., Psikolog</td>
-                    <td>Psikolog Klinis Umum</td>
+                    <th scope="row">{{ $jadwal->id }}</th>
+                    <td>{{ $jadwal->psikolog }}</td>
+                    <td>{{ $jadwal->kategori }}</td>
+                    <td>{{ $jadwal->tanggal }}</td>
                     <td>
-                      <a href="{{ route('detail-jadwal') }}" class="btn btn-primary"
+                      <a href="{{ route('jadwal.show', $jadwal->id) }}" class="btn btn-primary"
                         >Detail</a
                       >
                     </td>
                   </tr>
+                  @empty
+                  <div class="alert alert-danger">
+                    Data Jadwal belum Tersedia.
+                  </div>
+                  @endforelse
                 </tbody>
               </table>
             </div>
