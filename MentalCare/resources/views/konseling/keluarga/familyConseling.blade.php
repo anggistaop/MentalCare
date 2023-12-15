@@ -10,7 +10,7 @@
                     <img src="{{ asset('img/keluarga - family conseling.jpg') }}" class="gambar"></img>
                     <p>Selamat datang di Konseling Keluarga MentalCare - ruang aman untuk memperkuat ikatan keluarga Anda. Bersama-sama, kita akan menjelajahi dan memecahkan masalah, membangun komunikasi yang sehat, dan memastikan keluarga Anda tumbuh bersama dalam kebahagiaan. Temukan dukungan di sini.</p>
                     <button class="selengkapnya">
-                        <a href="#">Konsultasi Sekarang</a>
+                        <a href="https://wa.me/6285643152235?text=Halo%20Mental%20Care!%0ALayanan%20Konseling%20:%20Family%20Conseling%20(Keluarga)">Konsultasi Sekarang</a>
                     </button>
                 </div>
         </div>               
