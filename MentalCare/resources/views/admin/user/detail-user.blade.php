@@ -55,40 +55,39 @@
                   <h5 class="card-title">Anonymous</h5>
                   <div class="card-text">
                     <p>Nama Lengkap  </p><p> :</p>
-                    <p>John Doe</p>
+                    <p>{{ $user->namaLengkap }}</p>
                   </div>
                   <div class="card-text">
                     <p>Tanggal Lahir </p><p> :</p>
-                    <p>12 Desember 1999</p>
+                    <p>{{ $user->tanggalLahir }}</p>
                   </div>
                   <div class="card-text">
                     <p>Alamat        </p><p> :</p>
-                    <p>Yogyakarta</p>
+                    <p>{{ $user->alamat }}</p>
                   </div>
                   <div class="card-text">
                     <p>No Hp         </p><p> :</p>
-                    <p>5234905238324</p>
+                    <p>{{ $user->nomorHP }}</p>
                   </div>
                   <div class="card-text">
                     <p>Email         </p><p> :</p>
-                    <p>john@gmail.com</p>
+                    <p>{{ $user->email }}</p>
                   </div>
                   <div class="card-text">
                     <p>Rekam medis   </p><p> :</p>
-                    <p>bipolar</p>
+                    <p>{{ $user->rekamMedis }}</p>
                   </div>
                   <div class="card-text">
                     <p>Hasil         </p><p> :</p>
-                    <p>Pengobatan level ringan</p>
+                    <p>{{ $user->hasil }}</p>
                   </div>
-                  <a href="./form-user.html" class="btn btn-warning">Edit</a>
-                  <button
-                    type="submit"
-                    class="btn btn-danger ms-2"
-                    onclick="return confirm('apakah anda yakin')"
-                  >
-                    Delete
-                  </button>
+                  <form action="{{ route('user.destroy', $user->id) }}" method="POST">
+                    <a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning">Edit</a>
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger ms-2" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
+                </form>
+                
                 </div>
               </div>
             </div>

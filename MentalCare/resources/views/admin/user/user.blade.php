@@ -1,5 +1,5 @@
 @extends('admin.template')
-    <title>@yield('title', 'daftar-psikolog')</title>
+    <title>@yield('title', 'daftar-user')</title>
 
 @section('content')
 
@@ -90,7 +90,7 @@
                 <h3 class="fs-4 mb-3">Daftar User</h3>
               </div>
               <div class="col-md-4 text-end">
-                <a href="{{ route('form-user') }}" class="btn btn-primary fs-7 mb-3">Tambah Data</a>
+                <a href="{{ route('user.create') }}" class="btn btn-primary fs-7 mb-3">Tambah Data</a>
               </div>
             </div>
             <div class="col">
@@ -103,15 +103,21 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @forelse ($users as $user)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Faradiba, M.Psi., Psikolog</td>
+                    <th scope="row">{{ $user->id }}</th>
+                    <td>{{ $user->username }}</td>
                     <td>
-                      <a href="{{ route('detail-user') }}" class="btn btn-primary"
+                      <a href="{{ route('user.show', $user->id) }}" class="btn btn-primary"
                         >Detail</a
                       >
                     </td>
                   </tr>
+                  @empty
+                  <div class="alert alert-danger">
+                    Data User belum Tersedia.
+                  </div>
+                  @endforelse
                 </tbody>
               </table>
             </div>

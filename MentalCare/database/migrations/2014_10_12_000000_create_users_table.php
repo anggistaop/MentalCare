@@ -18,6 +18,12 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role', ['admin', 'patient'])->default('patient');
+            $table->string('namaLengkap')->nullable();
+            $table->date('tanggalLahir')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('nomorHP')->nullable();
+            $table->string('rekamMedis')->nullable();
+            $table->string('hasil')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

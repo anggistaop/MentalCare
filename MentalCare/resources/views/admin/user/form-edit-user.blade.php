@@ -48,9 +48,10 @@
         <!-- form ubah data -->
 
         <div class="col-md-6 p-4">
-          <h2 class="my-3">Tambah Data</h2>
-          <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data">
+          <h2 class="my-3">Edit Data</h2>
+          <form action="{{ route('user.update', $user->id) }}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="form-group row">
               <label for="namaLengkap" class="col-sm-3 col-form-label"
                 >Nama Lengkap</label
@@ -61,6 +62,7 @@
                   class="form-control"
                   id="namaLengkap"
                   name="namaLengkap"
+                  value="{{ $user->namaLengkap }}"
                   autofocus
                   autocomplete="off"
                   value=""
@@ -78,7 +80,7 @@
                   class="form-control"
                   id="tanggalLahir"
                   name="tanggalLahir"
-                  value=""
+                  value="{{ $user->tanggalLahir }}"
                 />
               </div>
             </div>
@@ -92,7 +94,7 @@
                   class="form-control"
                   id="alamat"
                   name="alamat"
-                  value=""
+                  value="{{ $user->alamat }}"
                 />
               </div>
             </div>
@@ -106,7 +108,7 @@
                   class="form-control"
                   id="nomorHP"
                   name="nomorHP"
-                  value=""
+                  value="{{ $user->nomorHP }}"
                 />
               </div>
             </div>
@@ -120,7 +122,7 @@
                   class="form-control"
                   id="username"
                   name="username"
-                  value=""
+                  value="{{ $user->username }}"
                 />
               </div>
             </div>
@@ -134,7 +136,7 @@
                   class="form-control"
                   id="email"
                   name="email"
-                  value=""
+                  value="{{ $user->email }}"
                 />
               </div>
             </div>
@@ -148,7 +150,7 @@
                   class="form-control"
                   id="password"
                   name="password"
-                  value=""
+                  value="{{ $user->password }}"
                 />
               </div>
             </div>
@@ -162,7 +164,7 @@
                   class="form-control"
                   id="rekamMedis"
                   name="rekamMedis"
-                  value=""
+                  value="{{ $user->rekamMedis }}"
                 />
               </div>
             </div>
@@ -176,13 +178,13 @@
                   class="form-control"
                   id="hasil"
                   name="hasil"
-                  value=""
+                  value="{{ $user->hasil  }}"
                 />
               </div>
             </div>
             <div class="form-group row mt-3">
               <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Edit Data</button>
               </div>
             </div>
           </form>
