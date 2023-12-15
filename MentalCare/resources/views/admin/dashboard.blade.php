@@ -21,7 +21,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i>Admin
+                                <i class="fas fa-user me-2"></i>{{ Auth::user()->username }}
                             </a>
                         </li>
                     </ul>

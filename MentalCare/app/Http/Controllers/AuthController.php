@@ -32,7 +32,11 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            return redirect()->route('index');
+            if (Auth::user()->isAdmin()) {
+                return redirect()->route('dashboard.index');
+            } else {
+                return redirect()->route('index');
+            }
         } else {
             return redirect()->route('login');
         }

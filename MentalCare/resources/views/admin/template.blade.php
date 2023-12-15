@@ -54,11 +54,13 @@
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold text-white"
             ><i class="fas fa-calendar-times me-2"></i>Jadwal</a
           >
-          <a
-            href="{{ route('auth.logout') }}"
-            class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
-            ><i class="fas fa-power-off me-2"></i>Logout</a
-          >
+          <form action="{{ route('auth.logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold" style="border: none; cursor: pointer;">
+                <i class="fas fa-power-off me-2"></i>Logout
+            </button>
+         </form>
+        
         </div>
       </div>
       <!-- /#sidebar-wrapper -->

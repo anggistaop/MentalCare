@@ -61,10 +61,12 @@
                         untuk memberikan sumber daya, informasi, dan dukungan yang Anda butuhkan. Mari jelajahi perjalanan menuju
                         kesehatan mental yang lebih baik.
                     </p>
-                    <button class="consult-now">
-                        <a href="#">Konsultasi Sekarang</a>
-                    </button>
-                </div>
+                    <form action="{{ route('auth.logout') }}" method="POST">
+                      @csrf
+                      <button type="submit" class="consult-now">
+                          Konsultasi Sekarang
+                      </button>
+                  </form>                </div>
                 <img id="home" src="{{asset('img/home.png')}}" alt="Home Image">
             </div>            
             <a href="whatsapp.com">
