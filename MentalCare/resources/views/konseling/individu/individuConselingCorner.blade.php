@@ -10,7 +10,7 @@
                 <img src="{{ asset('img/individu - conseling corner.jpg') }}" class="gambar"></img>
                 <p>Selamat datang di MentalCare Counseling Corner - pusat dukungan kesehatan mental online. Temukan keseimbangan, peroleh dukungan ahli, dan raih kesehatan mental terbaik Anda dalam satu platform. Konseling online yang nyaman, terpercaya, dan berfokus pada Anda. Mulailah perjalanan kesehatan mental Anda sekarang.</p>
                 <button class="selengkapnya">
-                    <a href="#">Konsultasi Sekarang</a>
+                    <a href="https://wa.me/6285643152235?text=Halo%20Mental%20Care!%0ALayanan%20Konseling%20:%20Conseling%20Corner%20(Individual)">Konsultasi Sekarang</a>
                 </button>
             </div>
         </div>               
