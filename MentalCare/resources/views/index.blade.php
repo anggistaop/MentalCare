@@ -47,7 +47,13 @@
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
             </ul>
-            <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+            @auth
+            <a href="{{ route('akun.index') }}">
+              <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
+            </a>
+            @else
+                <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+            @endauth
             <div class="hamburger">&#9776;</div>
         </nav>
         </header>
@@ -61,12 +67,10 @@
                         untuk memberikan sumber daya, informasi, dan dukungan yang Anda butuhkan. Mari jelajahi perjalanan menuju
                         kesehatan mental yang lebih baik.
                     </p>
-                    <form action="{{ route('auth.logout') }}" method="POST">
-                      @csrf
-                      <button type="submit" class="consult-now">
-                          Konsultasi Sekarang
-                      </button>
-                  </form>                </div>
+                    <button class="consult-now">
+                        <a href="#">Konsultasi Sekarang</a>
+                    </button>
+                </div>
                 <img id="home" src="{{asset('img/home.png')}}" alt="Home Image">
             </div>            
             <a href="whatsapp.com">

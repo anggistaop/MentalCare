@@ -29,9 +29,11 @@
                 <li><a href="#">Testimoni</a></li>
                 <li><a href="#">Tentang Kami</a></li>
             </ul>
-            <a class="account" href="account.html">
+            @auth
                 <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
-            </a>
+            @else
+                <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+            @endauth
             <div class="hamburger">&#9776;</div>
         </nav>
     </header>

@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <!-- mycss -->
-    <link rel="stylesheet" href="../assets/styles/account.css" />
+    <link rel="stylesheet" href="{{ asset('css/account.css') }}" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -24,28 +24,27 @@
       <nav>
         <div class="logo">MentalCare</div>
         <ul>
-          <li><a href="#">Beranda</a></li>
+          <li><a href="{{ route('index') }}">Beranda</a></li>
           <li class="dropdown">
-            <span>Konseling </span>
-            <div class="dropdown-content">
-              <a href="../konseling/konseling individu/index.html">Individu</a>
-              <a href="../konseling/konseling pasangan/index.html">Pasangan</a>
-              <a href="../konseling/konseling keluarga/index.html">Keluarga</a>
-            </div>
+              <span>Konseling </span>
+              <div class="dropdown-content">
+                  <a href="{{ route('konselingIndividu') }}">Individu</a>
+                  <a href="{{ route('konselingPasangan') }}">Pasangan</a>
+                  <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
+              </div>
           </li>
-
-          <li><a href="#">Psikolog</a></li>
-          <li><a href="#">Artikel</a></li>
-          <li><a href="#">Testimoni</a></li>
-          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
+          <li><a href="#artikel">Artikel</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
         </ul>
-        <a class="account" href="./beforelogin/index.html">
-          <img
-            src="../img/account 1.png"
-            class="account"
-            alt="Gambar Akun Pengguna"
-          />
+        @auth
+        <a href="{{ route('akun.index') }}">
+          <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
         </a>
+        @else
+          <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+        @endauth
       </nav>
     </header>
     <section class="halaman-account">
@@ -56,56 +55,67 @@
             <img src="img/profile1.png" alt="" class="profile-img" />
           </div>
           <div class="text-data">
-            <span class="name">Anonymous</span>
-            <span class="email">anonymous@gmail.com</span>
+            <span class="name">{{ Auth::user()->username }}</span>
+            <span class="email">{{ Auth::user()->email }}</span>
           </div>
-          <button class="button">Logout</button>
+          <form action="{{ route('auth.logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="button list-group-item list-group-item-action bg-transparent text-danger fw-bold" style="border: none; cursor: pointer;">
+                <i class="fas fa-power-off me-2"></i>Logout
+            </button>
+         </form>
         </div>
-        <form>
+        <form action="{{ route('akun.update', Auth::user()->id) }}" method="POST">
+          @csrf
+          @method('PUT')
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
+            <label for="namaLengkap" class="form-label"
               >Nama Lengkap</label
             >
             <input
               type="text"
               placeholder="Nama Lengkap"
               class="form-control"
-              id="exampleInputEmail1"
+              id="namaLengkap"
               aria-describedby="emailHelp"
+              value="{{ Auth::user()->namaLengkap }}"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <label for="email" class="form-label">Email</label>
             <input
               type="email"
               placeholder="Email"
               class="form-control"
-              id="exampleInputEmail1"
+              id="email"
               aria-describedby="emailHelp"
+              value="{{ Auth::user()->email }}"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Gender</label>
+            <label for="nomorHP" class="form-label">Nomor HP</label>
             <input
               type="text"
-              placeholder="Gender"
+              placeholder="Nomor HP"
               class="form-control"
-              id="exampleInputPassword1"
+              id="nomorHP"
+              value="{{ Auth::user()->nomorHP }}"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">TTL</label>
+            <label for="tanggalLahir" class="form-label">TTL</label>
             <input
               type="date"
               placeholder="Tempat Tanggal Lahir"
               class="form-control"
-              id="exampleInputPassword1"
+              id="tanggalLahir"
+              value="{{ Auth::user()->tanggalLahir }}"
             />
-          </div>
+          {{-- </div>
           <div class="mb-3">
             <label
               class="ubah-password"
-              for="exampleInputPassword1"
+              for="password"
               class="form-label"
               >Ubah Password</label
             >
@@ -113,10 +123,10 @@
               type="password"
               placeholder="New Password"
               class="form-control"
-              id="exampleInputPassword1"
+              id="password"
             />
           </div>
-          <button type="submit" class="btn btn-primary">SAVE CHANGES</button>
+          <button type="submit" class="btn btn-primary">SAVE CHANGES</button> --}}
         </form>
       </div>
     </section>

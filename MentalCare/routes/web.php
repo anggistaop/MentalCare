@@ -31,7 +31,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-
 //Konseling
 Route::get('/konselingindividual', function () {
     return view('konseling.individu.konselingIndividu');
@@ -96,4 +95,4 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::resource('/admin/user', \App\Http\Controllers\AdminUserController::class);
 });
 
-
+Route::resource('/akun', \App\Http\Controllers\AccountController::class);
