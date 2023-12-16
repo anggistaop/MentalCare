@@ -42,7 +42,8 @@
               <li><a href="{{ route('index') }}#about">Tentang Kami</a></li>
           </ul>
           <a class="account" href="{{ route('account') }}">
-              <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
+          @auth
+          <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
           @else
               <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
           @endauth
