@@ -31,6 +31,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+//Account
+Route::get('/account', function () {
+    return view('account.account');
+})->name('account');
 
 //Konseling
 Route::get('/konselingindividual', function () {

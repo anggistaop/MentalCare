@@ -29,7 +29,7 @@
               <li><a href="{{ route('index') }}#testimoni">Testimoni</a></li>
               <li><a href="{{ route('index') }}#about">Tentang Kami</a></li>
             </ul>
-            <a class="account" href="account.html">
+            <a class="account" href="{{ route('account') }}">
                 <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
             </a>
             <div class="hamburger">&#9776;</div>
