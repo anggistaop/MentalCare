@@ -19,7 +19,7 @@ Mental Care adalah website penanganan para penderita Mental Health yang dikemban
   </a>
 </p>
 
-<h3 align="center">Bootstrap</h3>
+<h3 align="center">Bootstrap 5</h3>
 
 ## Bootstrap 5
 
