@@ -15,19 +15,19 @@
         <nav>
             <div class="logo">MentalCare</div>
             <ul class="nav-links">
-                <li><a href="{{ route('index') }}">Beranda</a></li>
-                <li class="dropdown">
-                    <span>Konseling </span>
-                    <div class="dropdown-content">
-                        <a href="{{ route('konselingIndividu') }}">Individu</a>
-                        <a href="{{ route('konselingPasangan') }}">Pasangan</a>
-                        <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
-                    </div>
-                </li>
-                <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
-                <li><a href="#">Artikel</a></li>
-                <li><a href="#">Testimoni</a></li>
-                <li><a href="#">Tentang Kami</a></li>
+            <li><a href="{{ route('index') }}">Beranda</a></li>
+              <li class="dropdown">
+                  <span>Konseling </span>
+                  <div class="dropdown-content">
+                    <a href="{{ route('konselingIndividu') }}">Individu</a>
+                    <a href="{{ route('konselingPasangan') }}">Pasangan</a>
+                    <a href="{{ route('konselingKeluarga') }}">Keluarga</a>
+                  </div>
+              </li>
+              <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
+              <li><a href="{{ route('index') }}#artikel">Artikel</a></li>
+              <li><a href="{{ route('index') }}#testimoni">Testimoni</a></li>
+              <li><a href="{{ route('index') }}#about">Tentang Kami</a></li>
             </ul>
             <a class="account" href="account.html">
                 <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">

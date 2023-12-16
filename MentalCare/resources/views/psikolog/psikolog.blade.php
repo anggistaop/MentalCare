@@ -37,9 +37,9 @@
                   </div>
               </li>
               <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
-              <li><a href="#">Artikel</a></li>
-              <li><a href="#">Testimoni</a></li>
-              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="{{ route('index') }}#artikel">Artikel</a></li>
+              <li><a href="{{ route('index') }}#testimoni">Testimoni</a></li>
+              <li><a href="{{ route('index') }}#about">Tentang Kami</a></li>
           </ul>
           <a class="account" href="#">
               <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
