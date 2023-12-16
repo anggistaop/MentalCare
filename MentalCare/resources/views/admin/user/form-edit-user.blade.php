@@ -149,7 +149,7 @@
                   class="form-control"
                   id="password"
                   name="password"
-                  value="{{ $user->password }}"
+                  value=""
                 />
               </div>
             </div>

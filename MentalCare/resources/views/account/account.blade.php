@@ -47,8 +47,7 @@
         </a>
       </nav>
     </header>
-    @section('halaman-account')
-    <!-- <section class="halaman-account"> -->
+    <section class="halaman-account">
       <h1>Detail Akun</h1>
       <div class="account-container">
         <div class="profile-card">
@@ -132,8 +131,8 @@
           <button type="submit" class="btn btn-primary">SAVE CHANGES</button>
         </form>
       </div>
-      @endsection
-    <!-- </section> -->
+    
+    </section>
     <footer class="footer-container">
       <div class="footer-content">
         <div class="footer-logo">

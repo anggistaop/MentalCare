@@ -30,7 +30,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('index');
-
 //Account
 Route::get('/account', function () {
     return view('account.account');
@@ -100,4 +99,4 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::resource('/admin/user', \App\Http\Controllers\AdminUserController::class);
 });
 
-
+Route::resource('/akun', \App\Http\Controllers\AccountController::class);
