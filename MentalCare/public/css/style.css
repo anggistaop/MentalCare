@@ -12,7 +12,9 @@ body {
     font-family: "Poppins-Regular", Helvetica;
     background-color: #F0F8FF;
 }
-
+.artikel img {
+  width: 100%;
+}
 /* login & daftar */
 .daftar-bg,
 .login-bg {
