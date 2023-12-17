@@ -31,41 +31,44 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-//Konseling
-Route::get('/konselingindividual', function () {
-    return view('konseling.individu.konselingIndividu');
-})->name('konselingIndividu');
+Route::middleware(['auth'])->group(function () {
+    //Konseling
+    Route::get('/konselingindividual', function () {
+        return view('konseling.individu.konselingIndividu');
+    })->name('konselingIndividu');
+    
+    Route::get('/individuConselingCorner', function () {
+        return view('konseling.individu.individuConselingCorner');
+    })->name('individuConselingCorner');
+    
+    Route::get('/individuEconseling', function () {
+        return view('konseling.individu.individuEconseling');
+    })->name('individuEconseling');
+    
+    Route::get('/konselingPasangan', function () {
+        return view('konseling.pasangan.konselingPasangan');
+    })->name('konselingPasangan');
+    
+    Route::get('/pasanganOffline', function () {
+        return view('konseling.pasangan.pasanganOffline');
+    })->name('pasanganOffline');
+    
+    Route::get('/pasanganOnline', function () {
+        return view('konseling.pasangan.pasanganOnline');
+    })->name('pasanganOnline');
+    
+    Route::get('/konselingKeluarga', function () {
+        return view('konseling.keluarga.konselingKeluarga');
+    })->name('konselingKeluarga');
+    
+    Route::get('/familyConseling', function () {
+        return view('konseling.keluarga.familyConseling');
+    })->name('familyConseling');
+    
+    //Psikolog
+    Route::get('/psikolog', [PsikologController::class, 'index'])->name('psikolog');
+});
 
-Route::get('/individuConselingCorner', function () {
-    return view('konseling.individu.individuConselingCorner');
-})->name('individuConselingCorner');
-
-Route::get('/individuEconseling', function () {
-    return view('konseling.individu.individuEconseling');
-})->name('individuEconseling');
-
-Route::get('/konselingPasangan', function () {
-    return view('konseling.pasangan.konselingPasangan');
-})->name('konselingPasangan');
-
-Route::get('/pasanganOffline', function () {
-    return view('konseling.pasangan.pasanganOffline');
-})->name('pasanganOffline');
-
-Route::get('/pasanganOnline', function () {
-    return view('konseling.pasangan.pasanganOnline');
-})->name('pasanganOnline');
-
-Route::get('/konselingKeluarga', function () {
-    return view('konseling.keluarga.konselingKeluarga');
-})->name('konselingKeluarga');
-
-Route::get('/familyConseling', function () {
-    return view('konseling.keluarga.familyConseling');
-})->name('familyConseling');
-
-//Psikolog
-Route::get('/psikolog', [PsikologController::class, 'index'])->name('psikolog');
 
 //Artikel
 Route::get('/artikel1', function() {
