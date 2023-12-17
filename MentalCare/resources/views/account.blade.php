@@ -34,9 +34,9 @@
                   </div>
               </li>
               <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
-              <li><a href="#artikel">Artikel</a></li>
-              <li><a href="#testimoni">Testimoni</a></li>
-              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="{{ route('index') }}#artikel">Artikel</a></li>
+              <li><a href="{{ route('index') }}#testimoni">Testimoni</a></li>
+              <li><a href="{{ route('index') }}#about">Tentang Kami</a></li>
         </ul>
         @auth
         <a href="{{ route('akun.index') }}">
