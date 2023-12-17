@@ -52,7 +52,7 @@
             <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Anonymous</h5>
+                  <h5 class="card-title">{{ $user->username }}</h5>
                   <div class="card-text">
                     <p>Nama Lengkap  </p><p> :</p>
                     <p>{{ $user->namaLengkap }}</p>
