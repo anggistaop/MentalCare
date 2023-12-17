@@ -115,14 +115,24 @@
                       />
                     </div>
                   </form>
-                  <p align="center">
-                    Belum punya akun?
-                    <a
-                      href="{{ route('register') }}"
-                      class="text-warning"
-                      style="font-weight: 600; text-decoration: none"
-                    >
-                      <b>Daftar</b>
+                  @if(session('error'))
+                <div class="alert alert-danger text-center">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @if(session('warning'))
+                <div class="alert alert-warning text-center">
+                    {{ session('warning') }}
+                </div>
+            @endif
+            <p align="center">
+                Belum punya akun?
+                <a
+                    href="{{ route('register') }}"
+                    class="text-warning"
+                    style="font-weight: 600; text-decoration: none"
+                >
+        <b>Daftar</b>
                     </a>
                   </p>
                 </div>

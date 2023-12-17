@@ -38,7 +38,8 @@ class AuthController extends Controller
                 return redirect()->route('index');
             }
         } else {
-            return redirect()->route('login');
+            return redirect()->route('login')->with('error', 'Invalid username or password.')
+                ->withInput($request->except('password'));
         }
     }
 
