@@ -46,11 +46,17 @@
                   </div>
               </li>
               <li><a href="{{ route('psikolog') }}">Psikolog</a></li>
-              <li><a href="#artikel">Artikel</a></li>
-              <li><a href="#testimoni">Testimoni</a></li>
-              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="{{ route('index') }}#artikel">Artikel</a></li>
+              <li><a href="{{ route('index') }}#testimoni">Testimoni</a></li>
+              <li><a href="{{ route('index') }}#about">Tentang Kami</a></li>
           </ul>
-          <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+          @auth
+          <a href="{{ route('akun.index', Auth::user()->id ) }}">
+            <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
+          </a>
+          @else
+              <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+          @endauth
           <div class="hamburger">&#9776;</div>
       </nav>
       </header>
