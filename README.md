@@ -36,12 +36,12 @@ Bootstrap's documentation, included in this repo in the root directory, is built
 
 Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
 
-### Running documentation locally
+### Running documentation
 
-1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
-2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-4. Open `http://localhost:9001/` in your browser, and voilà.
+1. You can download Bootstrap from their official site at https://getbootstrap.com. Select the "Download" button and choose the option that suits you, be it a downloaded version or using a CDN (Content Delivery Network).
+2. If you downloaded Bootstrap, extract the zip file and move the css and js folders into your project. If you use a CDN, add a link in the <head> section of your HTML document
+3. You can also install using the command `npm install bootstrap@version` or you can visit the bootstrap documentation
+
 
 Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
 
