@@ -27,6 +27,33 @@ nav {
   width: 100% !important;
 }
 
+.login {
+  margin:auto;
+  width: 140px;
+  height: 41px;
+  background-color: #1E90FF;
+  border-radius: 20px;
+  border: 0px;
+  color: #F0F8FF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.login:hover {
+  background-color: #00008b;
+}
+
 .account {
   margin-left: 20%;
   margin-right: 70px;

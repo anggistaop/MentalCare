@@ -64,7 +64,7 @@
                             class="form-control form-control-lg py-3"
                             name="username"
                             autocomplete="off"
-                            placeholder="Masukan alamat username anda"
+                            placeholder="Masukan username anda"
                             style="
                               border-radius: 25px;
                               background-color: rgba(255, 255, 255, 0.3);
@@ -107,7 +107,7 @@
                             class="form-control form-control-lg py-3"
                             name="password"
                             autocomplete="off"
-                            placeholder="Masukan alamat email anda"
+                            placeholder="Masukan password anda"
                             style="
                               border-radius: 25px;
                               background-color: rgba(255, 255, 255, 0.3);
