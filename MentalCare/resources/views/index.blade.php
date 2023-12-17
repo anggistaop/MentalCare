@@ -68,7 +68,7 @@
                           kesehatan mental yang lebih baik.
                       </p>
                       <button class="consult-now">
-                          <a href="#">Konsultasi Sekarang</a>
+                          <a href="https://wa.me/6285643152235?text=Selamat%20Datang%20Di%20Layanan%20Customer%20Service%20Mental%20Care!%0AAda%20Yang%20Bisa%20Kami%20Bantu?">Konsultasi Sekarang</a>
                       </button>
                   </div>
                   <img id="home" src="{{ asset('img/home.png') }}" alt="Home Image">
