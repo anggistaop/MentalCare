@@ -43,7 +43,7 @@
           <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
         </a>
         @else
-            <button class="login"><a href="{{ route('index') }}">Masuk Akun</a></button>
+            <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
         @endauth
       </nav>
     </header>
