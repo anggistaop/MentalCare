@@ -740,8 +740,14 @@ footer {
     }
     
     .logo {
-      size: 50%;
+      font-size: 30px;
     }
+
+    .login {
+      margin:auto;
+      width: 120px;
+      height: 41px;
+  }
 
     .nav-links {
         display: none;
