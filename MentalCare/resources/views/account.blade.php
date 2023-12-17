@@ -64,10 +64,11 @@
           </form>
 
         </div>
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="{{ route('akun.update', Auth::user()->id) }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
           <div class="mb-3">
+            <input type="hidden" name="id" value="{{ Auth::user()->id }}">
             <label for="namaLengkap" class="form-label"
               >Nama Lengkap</label
             >
@@ -97,9 +98,10 @@
             <label for="nomorHP" class="form-label">Nomor HP</label>
             <input
               type="text"
-              placeholder="Gender"
+              placeholder="Nomor HP"
               class="form-control"
               id="nomorHP"
+                  name="nomorHP"
               value="{{ Auth::user()->nomorHP }}"
             />
           </div>
