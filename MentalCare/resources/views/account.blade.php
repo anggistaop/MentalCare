@@ -23,7 +23,7 @@
     <header>
       <nav>
         <div class="logo">MentalCare</div>
-        <ul>
+        <ul class="nav-links">
         <li><a href="{{ route('index') }}">Beranda</a></li>
               <li class="dropdown">
                   <span>Konseling </span>
@@ -45,6 +45,7 @@
         @else
             <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
         @endauth
+        <div class="hamburger">&#9776;</div>
       </nav>
     </header>
     <section class="halaman-account">
@@ -170,6 +171,7 @@
         </div>
       </div>
     </footer>
+    <script src="{{asset('js/nav-hamburger.js')}}"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

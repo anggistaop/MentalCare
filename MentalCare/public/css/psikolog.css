@@ -28,7 +28,8 @@ nav {
 }
 
 .account {
-  margin: auto;
+  margin-left: 20%;
+  margin-right: 70px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -57,7 +58,7 @@ ul {
 }
 
 ul li {
-  margin: 0 15px;
+  margin: 28px 15px 15px 15px;
   white-space: nowrap;
 }
 

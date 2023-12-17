@@ -95,7 +95,8 @@ nav {
 }
 
 .account {
-    margin: auto;
+    margin-left: 20%;
+    margin-right: 70px;
     width: 40px; 
     height: 40px; 
     border-radius: 50%; 
@@ -736,6 +737,10 @@ footer {
         display: block;
         cursor: pointer;
         font-size: 44px;
+    }
+    
+    .logo {
+      size: 50%;
     }
 
     .nav-links {
