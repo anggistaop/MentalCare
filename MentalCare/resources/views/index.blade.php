@@ -48,7 +48,7 @@
                 <li><a href="#about">Tentang Kami</a></li>
             </ul>
             @auth
-            <a href="{{ route('akun.index') }}">
+            <a href="{{ route('akun.index', Auth::user()->id ) }}">
               <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
             </a>
             @else

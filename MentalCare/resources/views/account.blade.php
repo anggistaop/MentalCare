@@ -38,13 +38,13 @@
               <li><a href="#testimoni">Testimoni</a></li>
               <li><a href="#about">Tentang Kami</a></li>
         </ul>
-        <a class="account" href="./beforelogin/index.html">
-          <img
-            src="../img/account 1.png"
-            class="account"
-            alt="Gambar Akun Pengguna"
-          />
+        @auth
+        <a href="{{ route('akun.index') }}">
+          <img src="{{ asset('img/account 1.png') }}" class="account" alt="Gambar Akun Pengguna">
         </a>
+        @else
+            <button class="login"><a href="{{ route('login') }}">Masuk Akun</a></button>
+        @endauth
       </nav>
     </header>
     <section class="halaman-account">
@@ -55,15 +55,16 @@
             <img src="img/profile1.png" alt="" class="profile-img" />
           </div>
           <div class="text-data">
-            <span class="name">{{ Auth::user()->name }}</span>
+            <span class="name">{{ Auth::user()->username }}</span>
             <span class="email">{{ Auth::user()->email }}</span>
           </div>
           <form action="{{ route('auth.logout') }}" method="POST">
+            @csrf
           <button type="submit" class="button">Logout</button>
           </form>
 
         </div>
-        <form action="{{ route('user.update', $user->id) }}" method="post" enctype="multipart/form-data">
+        <form action="#" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
           <div class="mb-3">
@@ -76,7 +77,7 @@
               class="form-control"
               id="namaLengkap"
               name="namaLengkap"
-                  value="{{ $user->namaLengkap }}"
+                  value="{{ Auth::user()->namaLengkap }}"
                   autofocus
                   autocomplete="off"
             />
@@ -89,16 +90,17 @@
               class="form-control"
               id="email"
                   name="email"
-                  value="{{ $user->email }}"
+                  value="{{ Auth::user()->email }}"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Gender</label>
+            <label for="nomorHP" class="form-label">Nomor HP</label>
             <input
               type="text"
               placeholder="Gender"
               class="form-control"
-              id="exampleInputPassword1"
+              id="nomorHP"
+              value="{{ Auth::user()->nomorHP }}"
             />
           </div>
           <div class="mb-3">
@@ -109,7 +111,7 @@
               class="form-control"
               id="tanggalLahir"
                   name="tanggalLahir"
-                  value="{{ $user->tanggalLahir }}"
+                  value="{{ Auth::user()->tanggalLahir }}"
             />
           </div>
           <div class="mb-3">
@@ -125,7 +127,7 @@
               class="form-control"
               id="password"
                   name="password"
-                  value="{{ $user->password }}"
+                  value=""
             />
           </div>
           <button type="submit" class="btn btn-primary">SAVE CHANGES</button>
