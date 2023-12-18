@@ -12,7 +12,7 @@ Tema yang dipilih : Kesejahteraan Penduduk
 # MentalCare
 Mental Care adalah website penanganan para penderita Mental Health yang dikembangkan sebagai upaya untuk mengatasi masalah kesehatan mental dan memberikan dukungan melalui teknologi modern. Mental Care muncul sebagai tanggapan terhadap krisis kesehatan mental yang semakin memprihatinkan.
 
-dapat diakses di https://mentalcare.biz.id
+Dapat diakses di https://mentalcare.biz.id
 
 # Framework
 <p align="center">
